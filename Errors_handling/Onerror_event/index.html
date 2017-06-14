@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Onerror Event</title>
+</head>
+<body>
+
+<!-- <img src="image.jpg" alt="fake" onerror="alert('image loading error')"> -->
+<img src="image.jpg" alt="fake">
+
+<script>	
+	window.onerror = function(message, fileAddres, errorLine) {
+		alert('Error: ' + message + '\n\nURL:' + fileAddres + '\n\nline: ' + errorLine);
+	}
+	document.images[0].onerror = function() {
+		alert('image loading error');
+	}	
+</script>
+<script>
+	document.openWindow();
+</script>
+<script>
+	document.openWindow(;
+</script>
+
+</body>
+</html>
