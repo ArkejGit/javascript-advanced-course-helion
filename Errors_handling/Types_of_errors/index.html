@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Types of errors</title>
+</head>
+<body>
+
+<script>	
+	function foo_1() {
+		alert("alert 1 foo_1"
+		alert("alert 2 foo_1");
+	}
+</script>
+<script>
+	function foo_2() {
+		alert("alert 1 foo_2");
+		document.openWindow();
+	}
+</script>
+<script>
+	function foo_3() {
+		alert("alert 1 foo_3");
+		alert("alert 2 foo_3");
+	}
+</script>
+
+<script> foo_1(); </script>
+<script> foo_2(); </script>
+<script> foo_3(); </script>
+
+</script>
+
+</body>
+</html>	
