@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Reading exception</title>
+</head>
+<body>
+
+<script>
+	
+	try {
+		//alert('alert');
+		//abc
+		eval('a b c');
+	} catch (exception) {
+		let com = `Name property: ${exception.name}\nMessage property: ${exception.message}`;
+		alert(com);
+	}
+
+	alert('outside try...catch block');
+
+</script>
+
+</body>
+</html>
