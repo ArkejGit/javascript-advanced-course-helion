@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Refering to forms elements</title>
+</head>
+<body>
+	
+	<form method="post" action="handlingForm.php" id="formID" name="formName">
+
+		<label for="textFieldID">Name and surname</label><br>
+		<div><input type="text" id="textFieldID" name="textFieldName"></div><br>
+
+		<label for="passwordFieldID">Name and surname</label><br>
+		<div><input type="password" id="passwordFieldID" name="passwordFieldName"></div><br>
+
+		<fieldset><legend>Hidden element</legend>
+			<input type="hidden">
+		</fieldset>
+	</form>
+
+	<script>
+
+		//textFieldID.disabled = true;
+
+		//alert(textFieldID.form);
+		//textFieldID.form.style.border = '1px solid #000';
+
+		function focusHandling() {
+			this.style.backgroundColor = 'yellow';
+		}
+
+		function blurHandling() {
+			this.style.backgroundColor = 'white';
+		}
+
+		textFieldID.addEventListener('focus', focusHandling);
+		textFieldID.addEventListener('blur', blurHandling);
+
+		passwordFieldID.addEventListener('focus', focusHandling);
+		passwordFieldID.addEventListener('blur', blurHandling);
+	</script>
+
+</body>
+</html>
