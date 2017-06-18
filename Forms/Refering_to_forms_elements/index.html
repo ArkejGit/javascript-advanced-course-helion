@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Refering to forms elements</title>
+</head>
+<body>
+	
+	<form method="post" action="handlingForm.php" id="formID" name="formName">
+		<div><input type="text" id="textFieldID_1" name="textFieldName_1"></div>
+		<div><input type="text" id="textFieldID_2" name="textFieldName_2"></div>
+	</form>
+
+	<script>
+		alert(document.getElementById('formID'));
+		alert(document.forms['formID'].elements[0]);
+		alert(formID.textFieldID_2);
+		formID.textFieldID_2.style.color='red';
+	</script>
+
+</body>
+</html>
